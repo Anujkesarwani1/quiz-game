@@ -1,6 +1,6 @@
 # quiz-game
 
-## Deployed Link - https://brewery-review-system-xi.vercel.app/
+## Deployed Link - https://quiz-game-pied.vercel.app/
 
 ## Technologies Used
 

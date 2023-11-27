@@ -1,0 +1,373 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is the capital of France?",
+      "options": [
+        "Berlin",
+        "Madrid",
+        "Paris",
+        "Rome"
+      ],
+      "correctAnswer": "Paris"
+    },
+    {
+      "id": 2,
+      "question": "What is the capital of India?",
+      "options": [
+        "New Delhi",
+        "Lucknow",
+        "Prayagraj",
+        "Hyderabad"
+      ],
+      "correctAnswer": "New Delhi"
+    },
+    {
+      "id": 3,
+      "question": "what is the output of print(4+4)?",
+      "options": [
+        "10",
+        "False",
+        "8",
+        "True"
+      ],
+      "correctAnswer": "8"
+    },
+    {
+      "id": 4,
+      "question": "In which year did World War II end?",
+      "options": [
+        "1943",
+        "1945",
+        "1950",
+        "1960"
+      ],
+      "correctAnswer": "1945"
+    },
+    {
+      "id": 5,
+      "question": "Who wrote 'Romeo and Juliet'?",
+      "options": [
+        "Charles Dickens",
+        "William Shakespeare",
+        "Jane Austen",
+        "Leo Tolstoy"
+      ],
+      "correctAnswer": "William Shakespeare"
+    },
+    {
+      "id": 6,
+      "question": "What is the largest planet in our solar system?",
+      "options": [
+        "Mars",
+        "Jupiter",
+        "Saturn",
+        "Neptune"
+      ],
+      "correctAnswer": "Jupiter"
+    },
+    {
+      "id": 7,
+      "question": "Which element has the chemical symbol 'O'?",
+      "options": [
+        "Oxygen",
+        "Osmium",
+        "Ozone",
+        "Ochre"
+      ],
+      "correctAnswer": "Oxygen"
+    },
+    {
+      "id": 8,
+      "question": "What is the result of 5 + 3 * 2?",
+      "options": [
+        "16",
+        "11",
+        "13",
+        "26"
+      ],
+      "correctAnswer": "11"
+    },
+    {
+      "id": 9,
+      "question": "Which programming language is known for its 'C-style' syntax?",
+      "options": [
+        "JavaScript",
+        "Python",
+        "Java",
+        "Ruby"
+      ],
+      "correctAnswer": "JavaScript"
+    },
+    {
+      "id": 10,
+      "question": "What does the acronym 'HTML' stand for?",
+      "options": [
+        "Hypertext Markup Language",
+        "Hyperlink and Text Markup Language",
+        "High-level Text Markup Language",
+        "Home Tool Markup Language"
+      ],
+      "correctAnswer": "Hypertext Markup Language"
+    },
+    {
+      "id": 11,
+      "question": "In JavaScript, what is the purpose of the 'addEventListener' method?",
+      "options": [
+        "To add two numbers",
+        "To attach an event handler to an HTML element",
+        "To create a new HTML element",
+        "To define a function"
+      ],
+      "correctAnswer": "To attach an event handler to an HTML element"
+    },
+    {
+      "id": 12,
+      "question": "Which data structure uses the LIFO (Last In, First Out) principle?",
+      "options": [
+        "Queue",
+        "Stack",
+        "Linked List",
+        "Tree"
+      ],
+      "correctAnswer": "Stack"
+    }
+  ],
+  "users": [
+    {
+      "email": "reena@gmail.com",
+      "password": "reena",
+      "fullName": "Reena Mam",
+      "role": "admin",
+      "id": 1
+    },
+    {
+      "email": "anuj@gmail.com",
+      "password": "anuj",
+      "fullName": "Anuj Kesarwani",
+      "role": "candidate",
+      "id": 3
+    },
+    {
+      "email": "avi@gmail.com",
+      "password": "avi",
+      "fullName": "Avi",
+      "role": "candidate",
+      "id": 4
+    },
+    {
+      "email": "ram@gmail.com",
+      "password": "ram",
+      "fullName": "Ram",
+      "role": "candidate",
+      "id": 5
+    }
+  ],
+  "scores": [
+    {
+      "fullName": "Aman",
+      "score": 2,
+      "time": 9.368,
+      "answers": [
+        {
+          "questionId": 3,
+          "isCorrect": false
+        },
+        {
+          "questionId": 2,
+          "isCorrect": false
+        },
+        {
+          "questionId": 2,
+          "isCorrect": true
+        },
+        {
+          "questionId": 1,
+          "isCorrect": true
+        }
+      ],
+      "emailId": "aman@gmail.com",
+      "id": 1
+    },
+    {
+      "fullName": "Anuj Kesarwani",
+      "score": 2,
+      "time": 14.399,
+      "answers": [
+        {
+          "questionId": 12,
+          "isCorrect": true
+        },
+        {
+          "questionId": 7,
+          "isCorrect": true
+        },
+        {
+          "questionId": 6,
+          "isCorrect": false
+        }
+      ],
+      "emailId": "anuj@gmail.com",
+      "id": 2
+    },
+    {
+      "fullName": "Anuj Kesarwani",
+      "score": 3,
+      "time": 12.072,
+      "answers": [
+        {
+          "questionId": 5,
+          "isCorrect": true
+        },
+        {
+          "questionId": 11,
+          "isCorrect": false
+        },
+        {
+          "questionId": 11,
+          "isCorrect": true
+        },
+        {
+          "questionId": 10,
+          "isCorrect": true
+        }
+      ],
+      "emailId": "anuj@gmail.com",
+      "id": 3
+    },
+    {
+      "fullName": "Aman Chaurasia",
+      "score": 3,
+      "time": 13.664,
+      "answers": [
+        {
+          "questionId": 8,
+          "isCorrect": true
+        },
+        {
+          "questionId": 3,
+          "isCorrect": true
+        },
+        {
+          "questionId": 5,
+          "isCorrect": true
+        }
+      ],
+      "emailId": "aman@gmail.com",
+      "id": 4
+    },
+    {
+      "fullName": "Avi",
+      "score": 3,
+      "time": 12.722,
+      "answers": [
+        {
+          "questionId": 1,
+          "isCorrect": true
+        },
+        {
+          "questionId": 2,
+          "isCorrect": true
+        },
+        {
+          "questionId": 3,
+          "isCorrect": true
+        }
+      ],
+      "emailId": "avi@gmail.com",
+      "id": 5
+    },
+    {
+      "fullName": "Ram",
+      "score": 2,
+      "time": 10.352,
+      "answers": [
+        {
+          "questionId": 6,
+          "isCorrect": true
+        },
+        {
+          "questionId": 1,
+          "isCorrect": false
+        },
+        {
+          "questionId": 3,
+          "isCorrect": true
+        }
+      ],
+      "emailId": "ram@gmail.com",
+      "id": 6
+    },
+    {
+      "fullName": "Anuj Kesarwani",
+      "score": 2,
+      "time": 16.295,
+      "answers": [
+        {
+          "questionId": 3,
+          "isCorrect": true
+        },
+        {
+          "questionId": 12,
+          "isCorrect": true
+        }
+      ],
+      "emailId": "anuj@gmail.com",
+      "id": 7
+    },
+    {
+      "fullName": "Ram",
+      "score": 3,
+      "time": 13.543,
+      "answers": [
+        {
+          "questionId": 10,
+          "isCorrect": true
+        },
+        {
+          "questionId": 5,
+          "isCorrect": true
+        },
+        {
+          "questionId": 3,
+          "isCorrect": true
+        }
+      ],
+      "emailId": "ram@gmail.com",
+      "id": 8
+    },
+    {
+      "fullName": "Anuj Kesarwani",
+      "score": 4,
+      "time": 136.68,
+      "answers": [
+        {
+          "questionId": 9,
+          "isCorrect": false
+        },
+        {
+          "questionId": 11,
+          "isCorrect": false
+        },
+        {
+          "questionId": 12,
+          "isCorrect": true
+        },
+        {
+          "questionId": 3,
+          "isCorrect": true
+        },
+        {
+          "questionId": 2,
+          "isCorrect": true
+        },
+        {
+          "questionId": 4,
+          "isCorrect": true
+        }
+      ],
+      "emailId": "anuj@gmail.com",
+      "id": 9
+    }
+  ]
+}

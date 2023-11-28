@@ -62,32 +62,61 @@ const QuizDashboard = ({ user }: QuizProps) => {
     setScore(isCorrect ? score + 1 : score)
   }
 
-  const handleSubmit = () => {
-    setCurrentQuestionIndex(currentQuestionIndex + 1)
+  const handleSubmit = async () => {
+    if (currentQuestionIndex + 1 === questions.length) {
+      setShowQuiz(false)
+      await handleQuitQuiz()
+    } else {
+      setCurrentQuestionIndex(currentQuestionIndex + 1)
+    }
   }
 
-  const handleQuitQuiz = () => {
+  const handleQuitQuiz = async () => {
     const endTime = Date.now()
     const timeTaken = (endTime - startTime) / 1000
 
     if (userName != '' || userAnswers.length != 0) {
-      ScoreService.createScores({
-        fullName: userName,
-        score,
-        time: timeTaken,
-        answers: userAnswers,
-        emailId: user.email,
-      })
-        .then((response) => {
-          console.log(response.data, 'Data posted successfully')
+      const response = await ScoreService.getAllScores()
+      const allScores = response.data
+      const findScoreByName = allScores.find(
+        (score: any) => score.fullName === userName
+      )
+      console.log(findScoreByName)
+      if (findScoreByName) {
+        ScoreService.updateScore(findScoreByName.id, {
+          fullName: userName,
+          score,
+          time: timeTaken,
+          answers: userAnswers,
+          emailId: user.email,
         })
-        .catch((error) => {
-          console.log('Error while storing the score', error)
+          .then((response) => {
+            console.log(response.data, 'Data updated successfully')
+          })
+          .catch((error) => {
+            console.log('Error while updating the score', error)
+          })
+          .finally(() => {
+            setShowQuiz(false)
+          })
+      } else {
+        ScoreService.createScores({
+          fullName: userName,
+          score,
+          time: timeTaken,
+          answers: userAnswers,
+          emailId: user.email,
         })
-        .finally(() => {
-          setShowQuiz(false)
-          // navigate('/')
-        })
+          .then((response) => {
+            console.log(response.data, 'Data posted successfully')
+          })
+          .catch((error) => {
+            console.log('Error while storing the score', error)
+          })
+          .finally(() => {
+            setShowQuiz(false)
+          })
+      }
     } else {
       setShowQuiz(false)
       navigate('/')
@@ -96,8 +125,7 @@ const QuizDashboard = ({ user }: QuizProps) => {
 
   return (
     <div className="container mt-5">
-      <h1 className='text-primary'>Quiz App</h1>
-
+      <h1 className="text-primary">Quiz App</h1>
       {!userName ? (
         <>
           <h3 className="mt-5">Hey, {user.fullName}</h3>
@@ -167,9 +195,6 @@ const QuizDashboard = ({ user }: QuizProps) => {
           >
             Log Out
           </button>
-          {/* <button className="btn btn-danger" onClick={handleQuitQuiz}>
-            Quit Quiz
-          </button> */}
         </div>
       )}
     </div>

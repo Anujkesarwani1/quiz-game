@@ -1,9 +1,9 @@
 import { API } from './API'
 
 class AuthService {
-    // getAllEmployees() {
-    //   return API.get('/employees')
-    // }
+  // getAllusers() {
+  //   return API.get('/users')
+  // }
 
   createUser(user: any) {
     return API.post('/users', user)
@@ -13,12 +13,12 @@ class AuthService {
     return API.get(`/users?email=${emaiId}`)
   }
 
-  //   updateEmployee(employeeId: number, employee: Employee) {
-  //     return API.put(`/employees/${employeeId}`, employee)
+  //   updateUser(userId: number, user: any) {
+  //     return API.put(`/users/${userId}`, user)
   //   }
 
-  //   deleteEmployee(employeeId: number) {
-  //     return API.delete(`/employees/${employeeId}`)
+  //   deleteUser(userId: number) {
+  //     return API.delete(`/users/${userId}`)
   //   }
 }
 

@@ -161,6 +161,13 @@
       "fullName": "Ram",
       "role": "candidate",
       "id": 5
+    },
+    {
+      "email": "aman@gmail.com",
+      "password": "aman",
+      "fullName": "Aman Chaurasia",
+      "role": "candidate",
+      "id": 6
     }
   ],
   "scores": [
@@ -237,11 +244,23 @@
     },
     {
       "fullName": "Aman Chaurasia",
-      "score": 3,
-      "time": 13.664,
+      "score": 7,
+      "time": 18.184,
       "answers": [
         {
+          "questionId": 10,
+          "isCorrect": true
+        },
+        {
           "questionId": 8,
+          "isCorrect": true
+        },
+        {
+          "questionId": 7,
+          "isCorrect": true
+        },
+        {
+          "questionId": 6,
           "isCorrect": true
         },
         {
@@ -249,7 +268,11 @@
           "isCorrect": true
         },
         {
-          "questionId": 5,
+          "questionId": 2,
+          "isCorrect": true
+        },
+        {
+          "questionId": 1,
           "isCorrect": true
         }
       ],

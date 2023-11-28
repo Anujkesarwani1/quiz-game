@@ -9,21 +9,9 @@ class ScoreService {
     return API.post('/scores', score)
   }
 
-  //   getEmployeeById(employeeId: number) {
-  //     return API.get(`/employees/${employeeId}`)
-  //   }
-
-  //   getEmployeeByEmail(emailId: string) {
-  //     return API.get(`/employees?email=${emailId}`)
-  //   }
-
-  //   updateEmployee(employeeId: number, employee: Employee) {
-  //     return API.put(`/employees/${employeeId}`, employee)
-  //   }
-
-  //   deleteEmployee(employeeId: number) {
-  //     return API.delete(`/employees/${employeeId}`)
-  //   }
+  updateScore(scoreId: number, score: any) {
+    return API.put(`/scores/${scoreId}`, score)
+  }
 }
 
 export default new ScoreService()
